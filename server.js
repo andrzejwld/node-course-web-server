@@ -35,7 +35,7 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/',(req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
-        welcomeMessage: 'Odpisz Arlecie!'
+        welcomeMessage: 'Hi!'
     })
 });
 
@@ -50,6 +50,10 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Error handling request'
     });
 });
+
+app.get('/projects', (req, res) => {
+    res.render('projects');
+})
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
